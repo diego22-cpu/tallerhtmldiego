@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header class="header">
+        <h1>Bienvenido a juan diego felipe garcia</h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Botón dinámico 1 -->
+        <div class="box">
+            <h2>Información Personal</h2>
+            <button class="toggle-button" onclick="toggleContent('info')">Mostrar Información</button>
+            <div id="info" class="content hidden">
+                <p>Nombre: Juan Diego </p>
+                <p>Apellido: Felipe Garcia</p>
+                <p>Email: felipegarciajuandiego08@gmail.com</p>
+                <p>Teléfono: +52 768 107 6657</p>
+                <p>Fecha de nacimiento: 02 de enero de 2003</p>
+            </div>
+        </div>
+
+        <!-- Botón dinámico 2 -->
+        <div class="box">
+            <h2>CSS</h2>
+            <button class="toggle-button" onclick="toggleContent('css-info')">¿Qué es CSS?</button>
+            <div id="css-info" class="content hidden">
+                <p>CSS (Cascading Style Sheets) es un lenguaje que se utiliza para definir el diseño y la apariencia de las páginas web. Permite controlar aspectos como colores, fuentes, márgenes y disposición de los elementos HTML. .</p>
+            </div>
+        </div>
+
+        <!-- Botón dinámico 3 con imagen -->
+        <div class="box">
+            <h2>Mi Imagen</h2>
+            <button class="toggle-button" onclick="toggleContent('image')">Mostrar Imagen</button>
+            <div id="image" class="content hidden">
+                <img src="diego.jpg" alt="Mi Imagen" class="responsive-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>© 2024 Juan Diego Felipe Garcia | Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para botones dinámicos -->
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
